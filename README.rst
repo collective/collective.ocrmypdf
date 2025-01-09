@@ -31,7 +31,7 @@
 collective.ocrmypdf
 ===================
 
-An addon to OCRMyPDF Ploe files async.
+An addon to OCRMyPDF Plone files async.  (WIP)
 
 Features
 --------
