@@ -19,13 +19,15 @@ class CollectiveOcrmypdfLayer(PloneSandboxLayer):
         # The z3c.autoinclude feature is disabled in the Plone fixture base
         # layer.
         import plone.app.dexterity
+
         self.loadZCML(package=plone.app.dexterity)
         import plone.restapi
+
         self.loadZCML(package=plone.restapi)
         self.loadZCML(package=collective.ocrmypdf)
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, 'collective.ocrmypdf:default')
+        applyProfile(portal, "collective.ocrmypdf:default")
 
 
 COLLECTIVE_OCRMYPDF_FIXTURE = CollectiveOcrmypdfLayer()
@@ -33,13 +35,13 @@ COLLECTIVE_OCRMYPDF_FIXTURE = CollectiveOcrmypdfLayer()
 
 COLLECTIVE_OCRMYPDF_INTEGRATION_TESTING = IntegrationTesting(
     bases=(COLLECTIVE_OCRMYPDF_FIXTURE,),
-    name='CollectiveOcrmypdfLayer:IntegrationTesting',
+    name="CollectiveOcrmypdfLayer:IntegrationTesting",
 )
 
 
 COLLECTIVE_OCRMYPDF_FUNCTIONAL_TESTING = FunctionalTesting(
     bases=(COLLECTIVE_OCRMYPDF_FIXTURE,),
-    name='CollectiveOcrmypdfLayer:FunctionalTesting',
+    name="CollectiveOcrmypdfLayer:FunctionalTesting",
 )
 
 
@@ -49,5 +51,5 @@ COLLECTIVE_OCRMYPDF_ACCEPTANCE_TESTING = FunctionalTesting(
         REMOTE_LIBRARY_BUNDLE_FIXTURE,
         z2.ZSERVER_FIXTURE,
     ),
-    name='CollectiveOcrmypdfLayer:AcceptanceTesting',
+    name="CollectiveOcrmypdfLayer:AcceptanceTesting",
 )
