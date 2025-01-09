@@ -1,0 +1,5 @@
+===================
+collective.ocrmypdf
+===================
+
+User documentation
