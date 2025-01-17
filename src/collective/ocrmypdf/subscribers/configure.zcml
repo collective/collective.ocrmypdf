@@ -4,10 +4,14 @@
 
  <!-- -*- extra stuff goes here -*- -->
 
-  <subscriber for="plone.dexterity.interfaces.IDexterityContent
+  <subscriber for="plone.app.contenttypes.interfaces.IFile
+                   zope.lifecycleevent.interfaces.IObjectAddedEvent"
+              handler=".file_modified_ocr.handler"
+  />
+
+  <subscriber for="plone.app.contenttypes.interfaces.IFile
                    zope.lifecycleevent.interfaces.IObjectModifiedEvent"
               handler=".file_modified_ocr.handler"
-              />
-
+  />
 
 </configure>
