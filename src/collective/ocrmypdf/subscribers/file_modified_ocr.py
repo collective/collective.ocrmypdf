@@ -7,7 +7,7 @@ from collective.ocrmypdf.config import REDIS_HOST, REDIS_PORT, REDIS_CHANNEL
 
 
 def handler(obj, event):
-    """Publish UID of added/modified files to the Redis channel."""
+    """Publish UID of PDF files to the Redis channel."""
     redis_client = redis.StrictRedis(host=REDIS_HOST, port=REDIS_PORT, db=0)
 
     if obj.content_type() == "application/pdf":
