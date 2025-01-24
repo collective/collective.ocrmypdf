@@ -8,10 +8,10 @@
    />
 
 
-  <!-- <subscriber for="plone.app.contenttypes.interfaces.IFile
+  <subscriber for="plone.app.contenttypes.interfaces.IFile
                    zope.lifecycleevent.interfaces.IObjectModifiedEvent"
               handler=".file_modified_ocr.handler"
-  /> -->
+  />
 
 
 </configure>
